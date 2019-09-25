@@ -12,10 +12,6 @@ button:focus {
   outline:0;
 }
 
-/* html {
-  overflow: scroll;
-} */
-
 html, body {
   height: 100%;
   width: 100%;
@@ -41,8 +37,8 @@ html, body {
 }
 
 .container > .playingBoard {
-  border-radius: 50px;
   background: white;
+  border-radius: 50px;
   display: block;
   margin: 50px auto;
   padding: 50px;
@@ -51,10 +47,10 @@ html, body {
 }
 
 .container > .playingBoard > .boardDisplay {
+  background: lightgray;
   border: 3px solid gray;
   border-radius: 25px;
   display: inline-block;
-  background: lightgray;
   height: 100%;
   max-width: 45%;
   min-width: 25%;
@@ -125,9 +121,9 @@ html, body {
 }
 
 .playerTurn > form > button {
+  background: white;
   border: 2px solid gray;
   border-radius: 15px;
-  background: white;
   color: gray;
   display: block;
   font-size: 1.1em;
@@ -141,8 +137,8 @@ html, body {
 
 .playerTurn > form > button:hover {
   color: black;
-  border-color: black;
   background: rgb(56, 177, 218);
+  border-color: black;
 }
 
 @keyframes glow {
@@ -160,9 +156,9 @@ html, body {
 }
 
 #settingsGear {
+  left: 15px;
   position: fixed;
   top: 15px;
-  left: 15px;
 }
 
 #settingsGear > img {
@@ -191,8 +187,8 @@ html, body {
   padding: 40px;
   position: fixed;
   text-align: left;
-  transform-origin: center;
   top: 50%;
+  transform-origin: center;
   width: 250px;
   z-index: 2;
 }
