@@ -31,11 +31,13 @@
               <td id="computerScore">0</td>
             </tr>
           </table>
+          <p id="result">Player wins this round!</p>
           <div class="playerTurn">
             <form>
-              <button class="choice" id="rock" type="button">Rock</button>
-              <button class="choice" id="paper" type="button">Paper</button>
-              <button class="choice" id="scissors" type="button">Scissors</button>
+              <button class="choice" id="rock" type="button" onclick="chooseRock()">Rock</button>
+              <button class="choice" id="paper" type="button" onclick="choosePaper()">Paper</button>
+              <button class="choice" id="scissors" type="button" onclick="chooseScissors()">Scissors</button>
+              <button class="choice" id="resetBtn" type="button" onclick="reset()">Reset Game</button>
             </form>
             <!-- We can also do buttons w/ anchor tags
             <a class="button" id="rock" onclick="">Rock</a>
@@ -52,21 +54,22 @@
       </div>
       <div class="settings">
         <div id="background"></div>
+        <div id="blurredBackground"></div>
         <a onclick="openWindow()" id="settingsGear"><img src="assets/images/settings-icon.png"></a>
         <div id="settingsOptions">
           <h3>Settings</h3>
-          <a onclick="closeWindow()" id="closeWindow"><img src="assets/images/close-window.png"></a>
+          <a onclick="closeWindow(); loadSettingsButtons();" id="closeWindow"><img src="assets/images/close-window.png"></a>
           <form>
             <h5>Images</h5>
             <div class="radioOption">
-              <input type="radio" name="imageType" value="hands" checked="checked">
+              <input type="radio" name="imageType" id="radio-hands" value="hands" checked="checked">
               <label>Hands</label>
             </div>
             <div class="radioOption">
-              <input type="radio" name="imageType" value="realImages">
+              <input type="radio" name="imageType" id="radio-literal" value="realImages">
               <label>Literal Icons</label>
             </div>
-            <button type="button" onclick="closeWindow()">Apply Changes</button>
+            <button type="button" onclick="closeWindow(); applySettings();">Apply Changes</button>
           </form>
         </div>
       </div>
