@@ -16,7 +16,7 @@ button:focus {
   overflow: scroll;
 } */
 
-html {
+html, body {
   height: 100%;
   width: 100%;
 }
@@ -94,8 +94,9 @@ html {
 
 .controlBoard > table {
   border-collapse: collapse;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
+
 .controlBoard > table td {
   padding: 5px 10px;
   text-align: center;
@@ -109,6 +110,15 @@ html {
 
 #computerLabel, #computerScore {
   border-left: 2px solid black;
+}
+
+#result {
+  color: rgb(32, 255, 32);
+  font-size: 1.25em;
+  height: 48px;
+  margin: 5px auto;
+  text-align: center;
+  width: 150px;
 }
 
 .controlBoard > .playerTurn {
@@ -136,6 +146,20 @@ html {
   background: rgb(56, 177, 218);
 }
 
+@keyframes glow {
+  0% { background: rgb(23, 197, 255); }
+  50% { background: white; }
+  100% { background: rgb(23, 197, 255); }
+}
+
+.playerTurn > form > #resetBtn {
+  animation: glow 2.5s ease infinite;
+  visibility: hidden;
+  -webkit-transition: visibility 1000ms ease-out; 
+  -moz-transition: visibility 1000ms ease-out;
+  -o-transition: visibility 1000ms ease-out;
+}
+
 #settingsGear {
   position: fixed;
   top: 15px;
@@ -146,7 +170,7 @@ html {
   height: 30px;
   transform: scale(1.00, 1.00);
   width: 30px;
-  -webkit-transition: 400ms ease-out; 
+  -webkit-transition: all 400ms ease-out; 
   -moz-transition: all 400ms ease-out;
   -o-transition: all 400ms ease-out;
 }
@@ -241,4 +265,15 @@ html {
   top: 0;
   width: 100%;
   z-index: -1;
+}
+
+#blurredBackground {
+  background: rgba(255, 255, 255, 0.8);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
